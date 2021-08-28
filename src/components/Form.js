@@ -35,12 +35,12 @@ function Form() {
     function onSubmit(event) {
         event.preventDefault();
         axios.post("https://server-gama.herokuapp.com/v1/usuarios/cadastro",{headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "application/json"},
             // 'Access-Control-Allow-Origin': '*',
             // 'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',
             // 'Access-Control-Allow-Headers': 'Content-Type',
             body: values
-        }})
+        })
         .then(() => {
             localStorage.setItem('name',JSON.stringify(values.name));
             history.push('/list');
