@@ -34,9 +34,8 @@ function Form() {
 
     function onSubmit(event) {
         event.preventDefault();
-        axios.post("https://server-gama.herokuapp.com/v1/usuarios/cadastro",{headers: {
-            "Content-Type": "application/json"},          
-            body: values
+        axios.post("https://server-gama.herokuapp.com/v1/usuarios/cadastro",                    
+             values
         })
         .then(() => {
             localStorage.setItem('name',JSON.stringify(values.name));
