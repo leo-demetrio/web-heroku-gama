@@ -36,7 +36,7 @@ function Form() {
         event.preventDefault();
         axios.post("https://server-gama.herokuapp.com/v1/usuarios/cadastro",                    
              values
-        })
+        )
         .then(() => {
             localStorage.setItem('name',JSON.stringify(values.name));
             history.push('/list');
