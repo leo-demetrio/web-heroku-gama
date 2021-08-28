@@ -34,8 +34,11 @@ function Form() {
 
     function onSubmit(event) {
         event.preventDefault();
-        axios.post("https://dashboard.heroku.com/v1/usuarios/cadastro",{headers: {
+        axios.post("https://server-gama.herokuapp.com/v1/usuarios",{headers: {
             "Content-Type": "application/json",
+            // 'Access-Control-Allow-Origin': '*',
+            // 'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',
+            // 'Access-Control-Allow-Headers': 'Content-Type',
             body: values
         }})
         .then(() => {
