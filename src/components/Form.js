@@ -34,7 +34,7 @@ function Form() {
 
     function onSubmit(event) {
         event.preventDefault();
-        axios.post("http://localhost:9000/v1/usuarios/cadastro",values)
+        axios.post("https://dashboard.heroku.com/apps/v1/usuarios/cadastro",values)
         .then(() => {
             localStorage.setItem('name',JSON.stringify(values.name));
             history.push('/list');
